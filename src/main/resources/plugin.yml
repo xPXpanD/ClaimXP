@@ -1,0 +1,25 @@
+name: ClaimXP
+version: 1.1
+description: A simple but highly configurable plugin that allows you to set up a super-simple single command for exchanging experience for items.
+author: XpanD
+website: www.expand.rs
+main: rs.expand.claimxp.ClaimXP
+
+commands:
+  cxp:
+    description: Exchanges your levels for one or more items!
+    aliases: [claimxp]
+    permission: claimxp.exchange
+  cxp reload:
+    description: Exchanges your levels for one or more items!
+    aliases: [claimxp reload]
+    usage: /cxp reload -- reloads the ClaimXP config.
+    permission: claimxp.reload
+
+permissions:
+  claimxp.exchange:
+    description: Allows you to exchange levels for one or more set items.
+    default: true
+  claimxp.reload:
+    description: Reloads the ClaimXP plugin, grabbing any new config changes.
+    default: op

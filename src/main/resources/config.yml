@@ -1,0 +1,55 @@
+# --------------------------------------------------------------------------------------------------------------------------
+# ---------------------------- Formatting tags: http://minecraft.gamepedia.com/Formatting_codes ---------------------------- 
+# ------------------------ Materials: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html ------------------------ 
+# --------------------------------------------------------------------------------------------------------------------------
+#                                                                     | ClaimXP! Config v1.1. |
+#                                                                     |    Made by: XpanD    |
+#                                                                     | Demo: one.expand.rs |
+# --------------------------------------------------------------------------------------------------------------------------
+# ----------- Demo string: &ff&ee&dd&cc&bb&aa&99&88&77&66&55&44&33&22&11&00&r&kk&r&ll&r&mm&r&nn&r&oo&rr -----------
+# --------- Feel free to paste the above string over a message and /cxpreload to see all the supported formatting tags! ---------
+# --------------------------------------------------------------------------------------------------------------------------
+
+# Should we allow people to use the exchange command while in X gamemode?
+allow-use-in-survival: true
+allow-use-in-creative: false
+allow-use-in-adventure: true
+allow-use-in-spectator: false
+
+# This is the meat of the plugin. Use Bukkit-compliant names; check the Materials link in the header. Try STONE if you error out.
+required-level: 30
+quantity: 1
+config-item: INK_SACK
+
+# What's the damage value of your item? Set this to 0 unless you have good reasons to change it! Lapis (INK_SACK variant 4) needs it.
+# Seriously; be careful with this stuff. Malformed values can cause client crashes the moment the item is viewed, even in the hotbar!
+# -+-+- PLEASE BE SURE TO CHANGE THIS VALUE IF YOU CHANGE THE ITEM BEING GIVEN OUT! YOU'LL GENERALLY WANT THIS AT: 0 -+-+-
+damage-value: 4
+
+# Should we drop items on the floor if somebody's inventory is full? Valid values are true/false. May allow items to be picked up by others.
+allow-and-drop-overfill: true
+
+# Technical colors (see formatting link) for console-printed messages. Debug colors are unused unless debug printing is on.
+# Some consoles may ignore any colors set here, but the messages should still print.
+error-color: dark_red
+debug-color: red
+print-debug-messages: false
+
+# -+-+-+-+-+-+-+-+- DO NOT FORGET TO UPDATE THESE TO MATCH YOUR OWN SETTINGS AND THEMES! -+-+-+-+-+-+-+-+-
+# lacking-levels can use the {levels} tag to show further needed levels. unspecified-error should not be shown, enable debug printing if it is.
+# Note: The server's default no-permission messages may show instead of what's below. Haven't found a way to force an overwrite just yet.
+exchange-successful: '&f[&6SV&f] &eYou''ve successfully traded &d30 &elevels for a piece of &dlapis&e.'
+exchange-successful-overfill: '&f[&6SV&f] &eExchange successful! Inventory full, some items dropped.'
+creative-use-disallowed: '&f[&4SV&f] &cYou cannot convert while in the Creative gamemode.'
+adventure-use-disallowed: '&f[&4SV&f] &cYou cannot convert while in the Adventure gamemode.'
+survival-use-disallowed: '&f[&4SV&f] &cYou cannot convert while in the Survival gamemode.'
+spectator-use-disallowed: '&f[&4SV&f] &cYou cannot convert while in the Spectator gamemode.'
+inventory-full: '&f[&4SV&f] &cYour inventory is full! Clear some space and try again.'
+lacking-levels-single: '&f[&4SV&f] &cYou need &5one more level &cto be able to do this.'
+lacking-levels-multiple: '&f[&4SV&f] &cYou need &5{levels} more levels &cto be able to do this.'
+unspecified-error: '&f[&4SV&f] &cUnspecified error. Report this to the server''s owner.'
+too-many-arguments: '&f[&4SV&f] &cToo many arguments specified. Syntax: &5/claimxp'
+no-permissions-reload: '&f[&4SV&f] &cYou do not have the &5claimxp.reload &cpermissions node.'
+no-permissions-exchange: '&f[&4SV&f] &cYou do not have the &5claimxp.exchange &cpermissions node.'
+called-from-console: '&f[&4SV&f] &cYou need to be in-game to use this command!'
+succesfully-reloaded-config: '&f[&6SV&f] &eReloaded the ClaimXP config file!'
