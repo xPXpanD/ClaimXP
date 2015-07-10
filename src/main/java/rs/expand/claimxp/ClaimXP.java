@@ -14,6 +14,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 // [8/7/'15] 1.1 = First public version! Added a ton of extra configurable checks, and a few safeguards. Cleaned up code a little.
 
 // TODO: Rewrite coloring code on command script to make it work in more consoles, if possible.
+// TODO: Add a global broadcast on exchange option.
+// TODO: Add an exp-to-bottles option.
+// TODO: Add VIP permissions for donator setups.
 
 public final class ClaimXP extends JavaPlugin
 {
@@ -21,7 +24,7 @@ public final class ClaimXP extends JavaPlugin
 	public void onEnable() 
 	{		
 		// Prints a message showing that we're up and running. Force colors so it works in most consoles.
-		Bukkit.getConsoleSender().sendMessage("§6ClaimXP 1.1 loaded and running, like a fridge!");
+		Bukkit.getConsoleSender().sendMessage("§6ClaimXP 2.0 loaded and running, like a fridge!");
 		
 		// Attempt to load the configuration file. If it doesn't exist, spawn a new one.
 		this.saveDefaultConfig();
@@ -30,6 +33,7 @@ public final class ClaimXP extends JavaPlugin
 		this.getCommand("claimxp").setExecutor(new DoCommand(this));
 		this.getCommand("cxp").setExecutor(new DoCommand(this));
 		this.getCommand("cxp reload").setExecutor(new DoCommand(this));
+		// this.getCommand("cxp bottle").setExecutor(new DoCommand(this));
 	}
 	
 	// Load a new configuration file if the current one is missing. Stops people having to reboot for a clean file.
